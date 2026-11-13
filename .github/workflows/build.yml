@@ -1,4 +1,4 @@
-name: Build Fabric Mod 26.1
+name: Build Sunspear Mod 26.1
 
 on: [push]
 
@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Распаковка архива
-        run: unzip -o mod.zip
+        run: unzip -o sunspear-mod-project.zip
 
       - name: Установка Java 25
         uses: actions/setup-java@v4
@@ -27,7 +27,7 @@ jobs:
       - name: Сохранение готового JAR
         uses: actions/upload-artifact@v4
         with:
-          name: fabric-mod-26.1
+          name: sunspear-mod-26.1
           path: |
             build/libs/*.jar
             !build/libs/*-sources.jar
